@@ -6,4 +6,4 @@ sudo apt-get install vim \
   --assume-yes
 
 echo "Generating SSH-keys for "$device_name
-ssh-keygen -t Curve25519 -C $device_name
+ssh-keygen -t ed25519 -C $device_name
