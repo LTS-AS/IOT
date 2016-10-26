@@ -16,5 +16,5 @@ mv ~/IOT/config/authorized_keys ~/.ssh/authorized_keys
 
 echo "Saving MAC address"
 mac_addr=$(cat /sys/class/net/eth0/address)
-mac_addr="${mac_addr//:}"
+mac_addr=${mac_addr//:}
 echo $mac_addr
