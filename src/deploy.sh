@@ -1,9 +1,11 @@
 #!/usr/bin/env bash
 . ~/IOT/config/init.sh
 
-sudo apt-get install vim \
-  git \
-  --assume-yes
+sudo apt-get install \
+	curl \
+	git \
+	vim \
+	--assume-yes
 
 #removing ssh-key generation during testing
 #echo "Generating SSH-keys for "$device_name
@@ -11,3 +13,7 @@ sudo apt-get install vim \
 
 echo "Moving list of authorized SSH-users"
 mv ~/IOT/config/authorized_keys ~/.ssh/authorized_keys
+
+echo "Saving MAC address"
+mac_addr=$(cat /sys/class/net/eth0/address)
+mac_addr=${mac_addr//:}
