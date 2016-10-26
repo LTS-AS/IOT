@@ -15,5 +15,5 @@
 
 echo "Saving MAC address"
 mac_addr=$(cat /sys/class/net/eth0/address)
-#mac_addr=${mac_addr//:}
+echo ${mac_addr//:}
 echo $mac_addr
