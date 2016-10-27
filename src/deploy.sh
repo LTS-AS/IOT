@@ -5,7 +5,7 @@ echo "Importing marameters init file"
 . ../config/init.sh
 
 echo "Updating packages:"
-suod apt-get update && sudo apt-get upgrade -y
+sudo apt-get update && sudo apt-get upgrade -y
 
 echo "Installing new packages"
 sudo apt-get install \
