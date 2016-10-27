@@ -13,6 +13,9 @@
 #echo "Moving list of authorized SSH-users"
 #mv ~/IOT/config/authorized_keys ~/.ssh/authorized_keys
 
+echo "Disabeling password login"
+cat /dir/file | sed -e "s/'#PasswordAuthentication yes'/'PasswordAuthentication no'/"
+
 echo "Saving MAC address"
 mac_addr=$(cat /sys/class/net/eth0/address)
 echo ${mac_addr/:}
