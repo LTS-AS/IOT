@@ -19,7 +19,7 @@ sudo apt-get install \
 #ssh-keygen -t ed25519 -C $device_name -f ~/.ssh/id_ed25519 -q -N ""
 
 echo "Moving list of authorized SSH-users"
-mv ~/IOT/config/authorized_keys ~/.ssh/authorized_keys
+cp ~/IOT/config/authorized_keys ~/.ssh/authorized_keys
 
 echo "Disabeling password login"
 sudo sed -i 's/#PasswordAuthentication yes/PasswordAuthentication no/g' /etc/ssh/sshd_config
