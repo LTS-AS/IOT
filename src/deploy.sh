@@ -4,11 +4,16 @@
 echo "Importing marameters init file"
 . ../config/init.sh
 
-#sudo apt-get install \
-#	curl \
-#	git \
-#	vim \
-#	--assume-yes
+echo "Updating packages:"
+suod apt-get update && sudo apt-get upgrade -y
+
+echo "Installing new packages"
+sudo apt-get install \
+  cron-apt \
+  curl \
+	git \
+	vim \
+	--assume-yes
 
 #echo "Generating SSH-keys for "$device_name
 #ssh-keygen -t ed25519 -C $device_name -f ~/.ssh/id_ed25519 -q -N ""
@@ -19,6 +24,6 @@ echo "Importing marameters init file"
 #echo "Disabeling password login"
 #sudo sed -i 's/#PasswordAuthentication yes/PasswordAuthentication no/g' /etc/ssh/sshd_config
 
-echo "Saving MAC address"
-mac_addr=$(cat /sys/class/net/eth0/address | sed 's/://g')
-echo $mac_addr
+#echo "Saving MAC address"
+#mac_addr=$(cat /sys/class/net/eth0/address | sed 's/://g')
+#echo $mac_addr
