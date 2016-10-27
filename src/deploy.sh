@@ -27,4 +27,7 @@ sudo sed -i 's/#PasswordAuthentication yes/PasswordAuthentication no/g' /etc/ssh
 echo "Finding MAC address"
 device_mac=$(cat /sys/class/net/eth0/address | sed 's/://g')
 
-echo "{device_name:$device_name, device_mac:$device_mac, device_key:$(cat ~/.ssh/id_ed25519.pub)}"
+echo "Reporting device info"
+echo "{\"device_name\":\""$device_name"\", \"device_mac\":\""$device_mac"\", \"device key\":\""$(cat ~/.ssh/id_ed25519.pub)"\"}"
+
+echo "OK"
