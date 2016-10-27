@@ -12,6 +12,7 @@ sudo apt-get install \
 	cron-apt \
 	curl \
 	git \
+	openssh-server \
 	vim \
 	--assume-yes
 
