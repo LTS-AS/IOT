@@ -28,6 +28,6 @@ echo "Finding MAC address"
 device_mac=$(cat /sys/class/net/eth0/address | sed 's/://g')
 
 echo "Reporting device info"
-echo "{\"device_name\":\""$device_name"\", \"device_mac\":\""$device_mac"\", \"device key\":\""$(cat ~/.ssh/id_ed25519.pub)"\"}"
+echo "{\"device_name\":\""$device_name"\", \"device_mac\":\""$device_mac"\", \"device key\":\""$(cat ~/.ssh/id_ed25519.pub)"\"}" > ~/IOT/config/device_info.json
 
 echo "OK"
