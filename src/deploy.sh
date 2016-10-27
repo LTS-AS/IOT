@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
-. ~/IOT/config/init.sh
+
+
+echo "Importing marameters init file"
+. ../config/init.sh
 
 #sudo apt-get install \
 #	curl \
@@ -14,9 +17,9 @@
 #mv ~/IOT/config/authorized_keys ~/.ssh/authorized_keys
 
 echo "Disabeling password login"
-cat /dir/file | sed -e "s/'#PasswordAuthentication yes'/'PasswordAuthentication no'/"
+sudo sed -i 's/#PasswordAuthentication yes/PasswordAuthentication no/g' /etc/ssh/sshd_config
 
 echo "Saving MAC address"
 mac_addr=$(cat /sys/class/net/eth0/address)
-echo ${mac_addr/:}
+echo ${mac_addr s/://g}
 echo $mac_addr
