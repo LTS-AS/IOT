@@ -14,7 +14,7 @@ State: Alpha
 - [ ] Inject empty SSH-file to boot partition
 - [ ] Inject administrator keys
 - [ ] Force SSH-users to use keys
-- [ ] Inject device name to 
+- [ ] Inject device name to /etc/hosts and /etc/hostname 
 
 ##
 - [ ] Find new pi on the network
