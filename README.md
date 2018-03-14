@@ -16,13 +16,14 @@ State: Alpha
 - [ ] Inject device name to /etc/hosts and /etc/hostname 
 
 ##
+- [ ] Expand partition on SD-card
 - [ ] Update OS
 - [ ] Install nessesary packages
 - [ ] Enable startup-script for application
 - [ ] Reboot
 
 ## TDOO for features
-- [ ] Trigg deployment when SD-card is inserted
+- [ ] Trigg deployment when external drive is inserted
 - [ ] Find new pi on the network
 - [ ] Structure for keeping track of deployments
 - [ ] WireGuard functionality
