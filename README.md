@@ -10,15 +10,19 @@ State: Alpha
 
 ## TODO spesific to Raspberry PIs
 - [ ] Deploy Raspbian OS to SD-card
-- [ ] Trigg deployment when SD-card is inserted
 - [ ] Inject empty SSH-file to boot partition
 - [ ] Inject administrator keys
 - [ ] Force SSH-users to use keys
 - [ ] Inject device name to /etc/hosts and /etc/hostname 
 
 ##
-- [ ] Find new pi on the network
 - [ ] Update OS
 - [ ] Install nessesary packages
 - [ ] Enable startup-script for application
 - [ ] Reboot
+
+## TDOO for features
+- [ ] Trigg deployment when SD-card is inserted
+- [ ] Find new pi on the network
+- [ ] Structure for keeping track of deployments
+- [ ] WireGuard functionality
